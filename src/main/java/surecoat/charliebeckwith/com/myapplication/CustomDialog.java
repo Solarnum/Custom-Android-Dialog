@@ -96,7 +96,6 @@ public class CustomDialog extends Dialog {
             hm.put(TITLE, titles[i]);
             hm.put(IMAGE, icons[i]);
             list.add(hm);
-            Log.d(TAG, "Adding " + i);
         }
         adapter = new MySimpleAdapter(getContext(), list, R.layout.list_item, from, to);
         listView.setAdapter(adapter);
@@ -175,7 +174,7 @@ public class CustomDialog extends Dialog {
             final int count = to.length;
 
             for (int i = 0; i < count; i++) {
-                Log.d(TAG, "binding view " + i);
+
                 final View v = view.findViewById(to[i]);
                 if (v != null) {
                     final Object data = dataSet.get(from[i]);
